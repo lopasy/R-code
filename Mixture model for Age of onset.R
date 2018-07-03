@@ -8,7 +8,7 @@ ukb2 = ukb2[!is.na(ukb2$UniEdu),]
 mo1 = FLXMRglm(family = "gaussian")
 mo2 = FLXMRglm(family = "gaussian")
 
-flexfit = flexmix(AgeSpexWear ~ 1, data = ukb2, k = 2, model = list(mo1, mo2))
+flexfit = flexmix(AgeSpexWear ~ 1, data = test, k = 2, model = list(mo1, mo2))
 
 c1 = parameters(flexfit, component=1)[[1]]
 c2 = parameters(flexfit, component=2)[[1]]
@@ -24,7 +24,7 @@ plot_mix_comps = function(x, mu, sigma, lam) {
 
 lam = table(clusters(flexfit))
 
-ggplot(ukb2) +
+ggplot(master_true) +
   geom_histogram(aes(AgeSpexWear, ..density..), binwidth = 1, colour = "black", fill = "white") +
   stat_function(geom = "line", fun = plot_mix_comps,
                 args = list(c1[1], c1[2], lam[1]/sum(lam)),
@@ -32,12 +32,13 @@ ggplot(ukb2) +
   stat_function(geom = "line", fun = plot_mix_comps,
                 args = list(c2[1], c2[2], lam[2]/sum(lam)),
                 colour = "blue", lwd = 1.5) +
+  theme_bw()+
   ylab("Density")
 
 
 mod2 = summary(refit(flexfit))
 
-wh_mix <- stepFlexmix(AgeSpexWear ~ 1, data = ukb2, control = list(verbose = 0), k=1:5, nrep=10)
+wh_mix <- stepFlexmix(AgeSpexWear ~ 1, data = master_true, control = list(verbose = 0), k=1:5, nrep=10)
 plot(BIC(wh_mix),type='b',ylab='BIC')
 points(x = which.min(BIC(wh_mix)),min(BIC(wh_mix)),col='red',pch=20)
 

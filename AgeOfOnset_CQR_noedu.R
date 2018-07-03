@@ -5,7 +5,7 @@ library(tidyr); library(foreach); library(doParallel); library(doSNOW)
 
 
 ref = "AgeofOnset"
-qs = 1:19/20; qss = qs^2
+qs = 1:19/20; qss = qs^2; qsss = qs^3; qssss = qs^4
 num_boots = 10000
 
 master_true = read.csv("./cnv_all_details_included.txt", sep="")
@@ -106,7 +106,7 @@ m = final
 for(i in 1:num_snps){
   final = cbind(master_true, m[,i])
   name = paste(colnames(m)[i], sep =""); names(final)[118] = name
-  myform = as.formula(paste("AgeSpexWear ~ ", name, " + UniEdu + Sex + Age + Geno_array + PC1 + PC2 + PC3 + PC4 + PC5 + PC6 + PC7 + PC8 + PC9 + PC10", sep = ""))
+  myform = as.formula(paste("AgeSpexWear ~ ", name, " + Sex + Age + Geno_array + PC1 + PC2 + PC3 + PC4 + PC5 + PC6 + PC7 + PC8 + PC9 + PC10", sep = ""))
   cat("snp",i,":",name, "\n")
   
   ##############################################################################################################
@@ -123,8 +123,8 @@ for(i in 1:num_snps){
   
   else
     
-  # Get standard errors
-  j = 1
+    # Get standard errors
+    j = 1
   ses = as.data.frame(matrix(ncol = 2, nrow = length(qs)))
   rownames(ses) = qs
   for (i in 1:length(qs)) {
@@ -164,8 +164,8 @@ for(i in 1:num_snps){
   
   else
     
-  # MR estimates
-  mr[next_mr,2] = round(res$beta[1],3);mr[next_mr,3] = as.numeric(formatC(res$pval[1], digits = 2, format = "e")); mr[next_mr,4] = round(res$ci.lb[1],3); mr[next_mr,5] = round(res$ci.ub[1],3)
+    # MR estimates
+    mr[next_mr,2] = round(res$beta[1],3);mr[next_mr,3] = as.numeric(formatC(res$pval[1], digits = 2, format = "e")); mr[next_mr,4] = round(res$ci.lb[1],3); mr[next_mr,5] = round(res$ci.ub[1],3)
   mr[next_mr,6] = round(res$beta[2],3);mr[next_mr,7] = as.numeric(formatC(res$pval[2], digits = 2, format = "e")); mr[next_mr,8] = round(res$ci.lb[2],3); mr[next_mr,9] = round(res$ci.ub[2],3)
   mr[next_mr,10] = round(res$beta[3],3); mr[next_mr,11] = as.numeric(formatC(res$pval[3], digits = 2, format = "e")); mr[next_mr,12] = round(res$ci.lb[3],3); mr[next_mr,13] = round(res$ci.ub[3],3)
   mr[next_mr,14] = round(res$beta[3],3); mr[next_mr,15] = as.numeric(formatC(res$pval[3], digits = 2, format = "e")); mr[next_mr,16] = round(res$ci.lb[3],3); mr[next_mr,17] = round(res$ci.ub[3],3)
@@ -254,13 +254,14 @@ for(i in 1:num_snps){
   next_mr = next_mr + 1
 }
 
-write.csv(results, file = paste("D:/CQR GWAS/results_edu_", ref, ".csv", sep = ""), row.names = F, quote = F)
-write.csv(mr, file = paste("D:/CQR GWAS/mr_edu_", ref, ".csv", sep = ""), row.names = F, quote = F)
-write.csv(mr_left, file = paste("D:/CQR GWAS/mr_left_edu_", ref, ".csv", sep = ""), row.names = F, quote = F)
-write.csv(mr_right, file = paste("D:/CQR GWAS/mr_right_edu_", ref, ".csv", sep = ""), row.names = F, quote = F)
-write.csv(mr_left_quad, file = paste("D:/CQR GWAS/mr_left_quad_edu_", ref, ".csv", sep = ""), row.names = F, quote = F)
-write.csv(mr_right_quad, file = paste("D:/CQR GWAS/mr_right_quad_edu_", ref, ".csv", sep = ""), row.names = F, quote = F)
-write.csv(df2, file = paste("D:/CQR GWAS/df2_edu_", ref, ".csv", sep = ""), row.names = F, quote = F)
+write.csv(results, file = paste("D:/CQR GWAS/results_noedu_", ref, ".csv", sep = ""), row.names = F, quote = F)
+write.csv(mr, file = paste("D:/CQR GWAS/mr_noedu_", ref, ".csv", sep = ""), row.names = F, quote = F)
+write.csv(mr_left, file = paste("D:/CQR GWAS/mr_left_noedu_", ref, ".csv", sep = ""), row.names = F, quote = F)
+write.csv(mr_right, file = paste("D:/CQR GWAS/mr_right_noedu_", ref, ".csv", sep = ""), row.names = F, quote = F)
+write.csv(mr_left_quad, file = paste("D:/CQR GWAS/mr_left_quad_noedu_", ref, ".csv", sep = ""), row.names = F, quote = F)
+write.csv(mr_right_quad, file = paste("D:/CQR GWAS/mr_right_quad_noedu_", ref, ".csv", sep = ""), row.names = F, quote = F)
+write.csv(df2, file = paste("D:/CQR GWAS/df2_noedu_", ref, ".csv", sep = ""), row.names = F, quote = F)
+
 
 
 single_cqr_spline_noedu = spline

@@ -25,14 +25,14 @@ writeLines(a, paste("avMSE", i, ".R", sep = ""))
 
 fileName <- 'G:/Work/Rcode/BEDMatrix2.R'
 
-snp = 1000
-for(i in 1:100){
+snp = 20000
+for(i in 101:120){
   
   a = readChar(fileName, file.info(fileName)$size)
   
   a = str_replace(a, "ref = 1", paste("ref = ", i, sep = ""))
-  a = str_replace(a, "num_snps = 1", paste("num_snps = ", snp-999, ":", snp, sep = ""))
-  snp = snp + 1000
+  a = str_replace(a, "num_snps = 1", paste("num_snps = ", snp+80001, ":", snp+100000, sep = ""))
+  snp = snp + 20000
   writeLines(a, paste("avMSE_GWAS", i, ".R", sep = ""))
 }
 
