@@ -210,4 +210,31 @@ Total 11 (delta 3), reused 0 (delta 0)[0K
 [0K[?25h[?25l
 [0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
 $[0K[3G[?25h[?25l$ git push origin master[0K[?25h[?25l$ git commit -m "more code"[0K[?25h[?25l$ git add .[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l$ git push origin master[0K[?25h[?25l$ git commit -m "more code"[0K[?25h[?25l
+[0K[?25h[master 88fc9f4] more code[0K[?25l
+ 12 files changed, 1508 insertions(+), 133 deletions(-)[0K
+ create mode 100644 AgeOfOnset_CQR_int.R[0K
+ create mode 100644 AgeOfOnset_CQR_noedu.R[0K
+ create mode 100644 AgeOfOnset_plots.R[0K
+ create mode 100644 AoO-PGRSxUniedu.R[0K
+ create mode 100644 Spline examples.R[0K
+ create mode 100644 faceted AoO plots.R[0K
+[0K[?25h[?25l
+[0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git commit -m "more code"[0K[?25h[?25l$ git add .[0K[?25h[?25l$ git push origin master[0K[?25h[?25l
+[0K[?25hCounting objects: 17, done.[0K[?25l
+Delta compression using up to 8 threads.[0K
+Compressing objects: 100% (17/17), done.[0K
+Writing objects: 100% (17/17), 11.66 KiB | 3.88 MiB/s, done.[0K
+Total 17 (delta 9), reused 0 (delta 0)[0K
+[0K[?25hremote: Resolving deltas: 100% (9/9), completed with 6 local objects.[0K[?25l
+[0K[?25hTo https://github.com/lopasy/R-code.git[0K[?25l
+   57375f9..88fc9f4  master -> master[0K
+[0K[?25h[?25l
+[0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
+$[0K[3G[?25h[0m[0K]0;:/e/Mybooks/R-code-github/R-code[?25l
+[0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
+[?25l$ g[0K[?25hi[0Kd[0K[7G[?25l$ gid a[0K[?25h[?25l$ gid[0K[7G[?25h[6G[?25l$ gi[0K[?25ht[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
 [0K[?25h
