@@ -298,4 +298,29 @@ The file will have its original line endings in your working directory.[0K[1A
 
 [0K[?25h[?25l
 [0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
-$[0K[3G[?25h[?25l$ git add .[0K[?25h
+$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l
+[0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git co[0K[?25hm[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m "[0K[?25h"[0K[18G[?25l$ git commit -m "c"[0K[19G[?25h[?25l$ git commit -m "co"[0K[20G[?25h[?25l$ git commit -m "coo"[0K[21G[?25h[?25l$ git commit -m "co"[0K[20G[?25h[?25l$ git commit -m "cor"[0K[21G[?25h[?25l$ git commit -m "corr"[0K[22G[?25h[?25l$ git commit -m "corre"[0K[23G[?25h[?25l$ git commit -m "correc"[0K[24G[?25h[?25l$ git commit -m "correct"[0K[25G[?25h[?25l$ git commit -m "correcte"[0K[25G[?25h[26G[?25l$ git commit -m "corrected"[0K[27G[?25h[?25l$ git commit -m "corrected "[0K[28G[?25h[?25l$ git commit -m "corrected s"[0K[29G[?25h[?25l$ git commit -m "corrected so"[0K[30G[?25h[?25l$ git commit -m "corrected som"[0K[31G[?25h[?25l$ git commit -m "corrected some"[0K[32G[?25h[?25l$ git commit -m "corrected some "[0K[33G[?25h[?25l$ git commit -m "corrected some c"[0K[34G[?25h[?25l$ git commit -m "corrected some co"[0K[35G[?25h[?25l$ git commit -m "corrected some cod"[0K[36G[?25h[?25l$ git commit -m "corrected some code"[0K[37G[?25h[?25l
+[0K[?25h[master c31cd42] corrected some code[0K[?25l
+ 11 files changed, 253 insertions(+), 58 deletions(-)[0K
+ rewrite .Rproj.user/FACE3116/console06/INDEX001 (85%)[0K
+ create mode 100644 CQR_GWAS.R[0K
+ create mode 100644 Create_Chinese_samples_UKB.R[0K
+ rewrite Eye_color.R (93%)[0K
+ create mode 100644 Multi-GxE.R[0K
+[0K[?25h[?25l
+[0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git commit -m "corrected some code"[0K[?25h[?25l$ git add .[0K[?25h[?25l$ ls[0K[?25h[?25l$ git add .[0K[?25h[?25l$ git commit -m "corrected some code"[0K[?25h[?25l$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push o[0K[?25h[?25lr[0K[13G[?25h[14G[?25l$ git push ori[0K[?25hg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hCounting objects: 18, done.[0K[?25l
+Delta compression using up to 8 threads.[0K
+Compressing objects:  58% (10/17)[0K[1G[?25hCompressing objects: 100% (17/17), done.[0K[?25l
+Writing objects: 100% (18/18), 4.49 KiB | 2.24 MiB/s, done.[0K
+Total 18 (delta 8), reused 0 (delta 0)[0K
+[0K[?25hremote: Resolving deltas: 100% (8/8), completed with 8 local objects.[0K[?25l
+[0K[?25hTo https://github.com/lopasy/R-code.git[0K[?25l
+   f768afd..c31cd42  master -> master[0K
+[0K[?25h[?25l
+[0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
+$[0K[3G[?25h[0m[0K]0;:/e/Mybooks/R-code-github/R-code[?25l
+[0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
+[?25l$ ls[0K[?25h[?25l$ cd[0K[?25h[?25l$ git config --global user.email 'apozarickij@gmail.com'[0K[?25h[?25l$ cd[0K[?25h[?25l$ ls[0K[?25h[?25l$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h
