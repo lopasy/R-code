@@ -3,11 +3,11 @@ library(BEDMatrix); library(lawstat)
 library(quantreg); library(metafor); library(ggplot2); library(ggpubr)
 library(tidyr); library(foreach); library(doParallel); library(doSNOW)
 
-
+missing = read.table("D:/CQR GWAS/missing.txt", quote="\"", comment.char="")
 path = "F:/Full_ukb/Output/true"
 
 ref = 3
-num_snps = 100101:100200
+num_snps = missing
 qs = 1:19/20; qss = qs^2
 num_boots = 1000
 qr_df = as.data.frame(matrix(nrow = length(qs), ncol = 2))

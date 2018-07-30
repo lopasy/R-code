@@ -10,25 +10,26 @@ mr = do.call(rbind.data.frame, chr)
 
 
 target = as.data.frame(results$SNP)
-data1 = read.csv("D:/CQR GWAS/cream2017_ukbb_replicated.csv"); data2 = data1[,c(9,5)]
+data1 = read.csv("D:/cream2017_ukbb_replicated.csv"); data2 = data1[,c(9,5)]
 
 stopwords = c("_A","_C","_T","_G")
 target[,1] = gsub(paste0(stopwords, collapse = "|"), "", target[,1])
-df2$SNP = gsub(paste0(stopwords, collapse = "|"), "", df2$SNP)
+meta$SNP = gsub(paste0(stopwords, collapse = "|"), "", meta$SNP)
 results$SNP = gsub(paste0(stopwords, collapse = "|"), "", results$SNP)
 mr$SNP = gsub(paste0(stopwords, collapse = "|"), "", mr$SNP)
 snps = merge(target,data2,1)
+snps = snps[order(match(snps$x, target)),]
 
 
-{df2$beta_ols = 0; df2$lci_ols = 0; df2$uci_ols = 0
-df2$beta_mr = 0; df2$lci_mr = 0; df2$uci_mr = 0
-df2$cqr_beta_mr = 0; df2$cqr_lci_mr = 0; df2$cqr_uci_mr = 0
-df2$cqr2_beta_mr = 0; df2$cqr2_lci_mr = 0; df2$cqr2_uci_mr = 0
-df2$Gene = 0}
+{meta$beta_ols = 0; meta$lci_ols = 0; meta$uci_ols = 0
+meta$beta_mr = 0; meta$lci_mr = 0; meta$uci_mr = 0
+meta$cqr_beta_mr = 0; meta$cqr_lci_mr = 0; meta$cqr_uci_mr = 0
+meta$cqr2_beta_mr = 0; meta$cqr2_lci_mr = 0; meta$cqr2_uci_mr = 0
+meta$Gene = 0}
 
 target = results$SNP
 
-df2 = as.data.frame(df2); results = as.data.frame(results); mr = as.data.frame(mr)}
+df2 = as.data.frame(meta); results = as.data.frame(results); mr = as.data.frame(mr)}
 
 for(i in target){
   df2[which(df2$SNP == i), 8] = results[which(results$SNP == i), 2]
@@ -49,14 +50,14 @@ for(i in target){
 rep.row<-function(x,n){
   matrix(rep(x,each=n),nrow=n)
 }
-df2$Gene = as.character(rep.row(snps$GENE, 19))
+df2$Gene = as.character(rep.row(snps$GENE, length(qs)))
 
 
 plots = list()
 target = results$SNP
 titles = 1
 plot_num = 1
-qs = 1:19
+qs = 1:length(qs)
 
 for(i in 1:length(target)){
   name1 = df2[qs, 20][1]
@@ -64,7 +65,7 @@ for(i in 1:length(target)){
   
 myplot = ggplot(data = df2[qs,],aes(qs)) + 
   geom_ribbon(aes(ymin = cqr_lci, ymax = cqr_uci), fill = "grey70", alpha = 0.8) +
-  geom_line(aes(y = cqr_slope), colour = "black", size = 0.6) +
+  geom_line(aes(y = BETA), colour = "black", size = 0.6) +
   geom_line(aes(y = beta_mr+cqr_beta_mr*(qs/100)+cqr2_beta_mr*(qs/100)^2), colour = "blue", size = 0.4) +
   geom_line(aes(y = lci_mr+cqr_lci_mr*(qs/100)+cqr2_lci_mr*(qs/100)^2), linetype = "longdash", size = 0.4, colour = "blue") + 
   geom_line(aes(y = uci_mr+cqr_uci_mr*(qs/100)+cqr2_uci_mr*(qs/100)^2), linetype = "longdash", size = 0.4, colour = "blue") +
@@ -84,7 +85,7 @@ myplot = ggplot(data = df2[qs,],aes(qs)) +
 plots[[plot_num]] = myplot
 titles = titles + 1
 plot_num = plot_num + 1
-qs = qs + 19
+qs = qs + length(qs)
 }
 
 
@@ -96,9 +97,9 @@ for(i in 1:30){
                    plots[[plot_num + 4]], plots[[plot_num + 5]], plots[[plot_num + 6]], plots[[plot_num + 7]], plots[[plot_num + 8]], 
                    plots[[plot_num + 9]], plots[[plot_num + 10]], plots[[plot_num + 11]], plots[[plot_num + 12]], plots[[plot_num + 13]], 
                    plots[[plot_num + 14]], plots[[plot_num + 15]], ncol = 4, nrow = 4)
-  file_out = paste("D:/", "AgeOfOnset_plot", i , ".png", sep = "")
+  file_out = paste("D:/", "avMSE", i , ".png", sep = "")
   png(file_out, width = 5*ppi, height = 6*ppi, res = ppi)
-  last_fig = annotate_figure(figure, bottom = text_grob("Age of Onset percentile", color = "black", size = 10),
+  last_fig = annotate_figure(figure, bottom = text_grob("avMSE percentile", color = "black", size = 10),
                 left = text_grob("Genetic effect size (diopters per copy of the risk allele)", color = "black", rot = 90, size = 10))
   print(last_fig)
   dev.off()
@@ -208,7 +209,7 @@ for(i in 1:30){
                      plots[[plot_num + 4]], plots[[plot_num + 5]], plots[[plot_num + 6]], plots[[plot_num + 7]], plots[[plot_num + 8]], 
                      plots[[plot_num + 9]], plots[[plot_num + 10]], plots[[plot_num + 11]], plots[[plot_num + 12]], plots[[plot_num + 13]], 
                      plots[[plot_num + 14]], plots[[plot_num + 15]], ncol = 4, nrow = 4)
-  file_out = paste("D:/", "AgeOfOnset_plot", i , ".png", sep = "")
+  file_out = paste("D:/CQR-paper-corrections", "avMSE_plot", i , ".png", sep = "")
   png(file_out, width = 5*ppi, height = 6*ppi, res = ppi)
   last_fig = annotate_figure(figure, bottom = text_grob("Age of Onset percentile", color = "black", size = 10),
                              left = text_grob("Genetic effect size (diopters per copy of the risk allele)", color = "black", rot = 90, size = 10))

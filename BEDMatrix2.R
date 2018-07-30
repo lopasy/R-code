@@ -3,11 +3,11 @@ library(BEDMatrix); library(lawstat)
 library(quantreg); library(metafor); library(ggplot2); library(ggpubr)
 library(tidyr); library(foreach); library(doParallel); library(doSNOW)
 
-
+missing = read.table("/home/c1669309/scripts/missing.txt", quote="\"", comment.char="")
 path = "/scratch/share_PR300/Alfred/BOLT/GTEx/true"
 
 ref = 1
-num_snps = 1
+num_snps = missing
 qs = seq(0.1,0.9,0.1); qss = qs^2
 num_boots = 1000
 
