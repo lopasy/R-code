@@ -395,4 +395,24 @@ Total 8 (delta 4), reused 0 (delta 0)[0K
 $[0K[3G[?25h[0m[0K]0;:/e/Mybooks/R-code-github/R-code[?25l
 [0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
 [?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git c[0K[?25ho[0Km[0Km[0Ki[0Kt[0K[14G[?25l$ git commit -[0K[?25hm[0K[17G[?25l$ git commit -m £[0K[?25h£[0K[?25l$ git commit -m £[0K[?25h[?25l$ git commit -m[0K[17G[?25h[?25l$ git commit -m "[0K[?25h"[0K[18G[?25l$ git commit -m "M"[0K[19G[?25h[?25l$ git commit -m "Mo"[0K[20G[?25h[?25l$ git commit -m "Mor"[0K[21G[?25h[?25l$ git commit -m "More"[0K[22G[?25h[?25l$ git commit -m "More "[0K[23G[?25h[?25l$ git commit -m "More c"[0K[24G[?25h[?25l$ git commit -m "More co"[0K[25G[?25h[?25l$ git commit -m "More cod"[0K[26G[?25h[?25l$ git commit -m "More code"[0K[27G[?25h[26G[25G[24G[23G[22G[21G[20G[19G[?25l$ git commit -m "ore code"[0K[18G[?25h[?25l$ git commit -m "Sore code"[0K[19G[?25h[?25l$ git commit -m "Soore code"[0K[20G[?25h[?25l$ git commit -m "Somore code"[0K[21G[?25h[?25l$ git commit -m "Someore code"[0K[22G[?25h[?25l$ git commit -m "Some ore code"[0K[23G[?25h[?25l$ git commit -m "Some more code"[0K[24G[?25h[?25l
+[0K[?25h[master d266a52] £Some more code[0K[?25l
+ 2 files changed, 74 insertions(+), 2 deletions(-)[0K
+ rewrite .Rproj.user/FACE3116/console06/INDEX001 (85%)[0K
+[0K[?25h[?25l
+[0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ g[0K[?25hi[0Kt[0K[7G[?25l$ git p[0K[?25hu[0Ks[0Kh[0K[12G[?25l$ git push o[0K[?25hr[0Ki[0Kg[0Ki[0Kn[0K[19G[?25l$ git push origin m[0K[?25ha[0Ks[0Kt[0Ke[0Kr[0K[?25l
+[0K[?25hCounting objects: 7, done.[0K[?25l
+Delta compression using up to 8 threads.[0K
+Compressing objects: 100% (7/7), done.[0K
+Writing objects: 100% (7/7), 1.24 KiB | 634.00 KiB/s, done.[0K
+Total 7 (delta 3), reused 0 (delta 0)[0K
+[0K[?25hremote: Resolving deltas: 100% (3/3), completed with 3 local objects.[0K[?25l
+[0K[?25hTo https://github.com/lopasy/R-code.git[0K[?25l
+   5fbaca0..d266a52  master -> master[0K
+[0K[?25h[?25l
+[0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git push origin master[0K[?25h[?25l$ git commit -m £"Some more code"[0K[?25h[?25l$ git add .[0K[?25h[?25l
 [0K[?25h
