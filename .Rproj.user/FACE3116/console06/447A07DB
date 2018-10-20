@@ -415,4 +415,37 @@ Total 7 (delta 3), reused 0 (delta 0)[0K
 [0K[?25h[?25l
 [0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
 $[0K[3G[?25h[?25l$ git push origin master[0K[?25h[?25l$ git commit -m £"Some more code"[0K[?25h[?25l$ git add .[0K[?25h[?25l
+[0K[?25h[?25l
+[0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git add .[0K[3G[?25h[12G[?25l$ git push origin master[0K[?25h[?25l$ git commit -m £"Some more code"[0K[?25h[33G[32G[31G[30G[29G[28G[27G[26G[25G[24G[23G[22G[21G[20G[19G[18G[?25l$ git commit -m "Some more code"[0K[17G[?25h[?25l
+[0K[?25h[master 77c9705] ÂSome more code[0K[?25l
+ 7 files changed, 609 insertions(+)[0K
+ create mode 100644 CQR-prediction-Height.R[0K
+ create mode 100644 CQR-prediction-MSE.R[0K
+ create mode 100644 CQR-prediction-simulation.R[0K
+ create mode 100644 CREAM-GxG.R[0K
+ create mode 100644 Extract_pdf.R[0K
+ create mode 100644 GxE-GxG-MSE-prediction.R[0K
+[0K[?25h[?25l
+[0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git commit -m ▒"Some more code"[0K[3G[?25h[34G[?25l$ git add .[0K[?25h[?25l$ git push origin master[0K[?25h[?25l
+[0K[?25hCounting objects: 12, done.[0K[?25l
+Delta compression using up to 8 threads.[0K
+Compressing objects: 100% (12/12), done.[0K
+Writing objects: 100% (12/12), 5.07 KiB | 1.69 MiB/s, done.[0K
+Total 12 (delta 4), reused 0 (delta 0)[0K
+[0K[?25hremote: Resolving deltas: 100% (4/4), completed with 2 local objects.[0K[?25l
+[0K[?25hTo https://github.com/lopasy/R-code.git[0K[?25l
+   d266a52..77c9705  master -> master[0K
+[0K[?25h[?25l
+[0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
+$[0K[3G[?25h[0m[0K]0;:/e/Mybooks/R-code-github/R-code[?25l
+[0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
+[?25l[1A[0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0K
+[0m$ git[0K[7G[?25h[?25l$ git a[0K[?25hd[0Kd[0K[11G[?25l$ git add .[0K[?25h[?25l
+[0K[?25hwarning: LF will be replaced by CRLF in .Rproj.user/FACE3116/sources/prop/INDEX.[0K[?25l
+The file will have its original line endings in your working directory.[0K
+[0K[?25h[?25l
+[0;32mAlfred@DESKTOP-C3GD8JU [0;35m [0;33m/e/Mybooks/R-code-github/R-code[0;36m (master)[0m[0K
+$[0K[3G[?25h[?25l$ git add .[0K[?25h[?25l
 [0K[?25h
